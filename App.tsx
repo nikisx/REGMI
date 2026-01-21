@@ -24,17 +24,17 @@ const NEWS_MOCK: NewsItem[] = [
   {
     id: 1,
     title: 'Учредяване на РЕГМИ',
-    date: '20 Май 2024',
+    date: '22.01.2026',
     excerpt: 'Официалното учредяване на Българското научно дружество по регулация и осигуряване на медицински изделия постави началото на нова ера в сектора.',
     imageUrl: 'https://picsum.photos/id/48/800/600'
   },
-  {
-    id: 2,
-    title: 'Предстоящ семинар: MDR/IVDR',
-    date: '15 Юни 2024',
-    excerpt: 'Заповядайте на нашата първа отворена дискусия относно новите европейски регламенти за медицински изделия.',
-    imageUrl: 'https://picsum.photos/id/180/800/600'
-  }
+  // {
+  //   id: 2,
+  //   title: 'Предстоящ семинар: MDR/IVDR',
+  //   date: '15 Юни 2024',
+  //   excerpt: 'Заповядайте на нашата първа отворена дискусия относно новите европейски регламенти за медицински изделия.',
+  //   imageUrl: 'https://picsum.photos/id/180/800/600'
+  // }
 ];
 
 const OBJECTIVES = [
@@ -73,14 +73,12 @@ function App() {
         }`}
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-          <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-regmi-600 rounded-lg flex items-center justify-center text-white font-bold font-display text-xl group-hover:bg-regmi-700 transition-colors">
-              R
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display font-bold text-slate-900 leading-tight">РЕГМИ</span>
-              <span className="text-[10px] text-slate-500 uppercase tracking-wider hidden sm:block">Medical Devices Regulation</span>
-            </div>
+        <a href="#home" className="flex items-center gap-2 group">
+            <img 
+              src="./logo.jpg" 
+              alt="РЕГМИ" 
+              className="h-14 md:h-16 w-auto object-contain" 
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -176,15 +174,6 @@ function App() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="bg-regmi-50 p-8 rounded-2xl border border-regmi-100 mb-8">
-                <h3 className="text-xl font-bold text-regmi-800 mb-4 flex items-center gap-2">
-                  <ShieldCheck className="text-regmi-600" />
-                  Какво означава РЕГМИ?
-                </h3>
-                <p className="text-slate-700">
-                  Кратко бранд-име, образувано от <span className="font-bold text-regmi-700">РЕГ</span> (регулация) + <span className="font-bold text-regmi-700">М</span> (медицински) + <span className="font-bold text-regmi-700">И</span> (изделия).
-                </p>
-              </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">
                 Нашата мисия
               </h2>
@@ -254,7 +243,7 @@ function App() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">{member.name}</h3>
                 <p className="text-regmi-600 font-semibold mb-1">{member.role}</p>
-                <p className="text-slate-500 text-sm">{member.title}</p>
+                {/* <p className="text-slate-500 text-sm">{member.title}</p> */}
               </div>
             ))}
           </div>
@@ -290,7 +279,7 @@ function App() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionTitle title="Новини и събития" subtitle="Актуална информация за дейността на дружеството" />
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
             {NEWS_MOCK.map((news) => (
               <article key={news.id} className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full border border-slate-100">
                 <div className="h-48 overflow-hidden">
@@ -331,7 +320,6 @@ function App() {
                     <div>
                       <h4 className="font-bold text-slate-900 mb-1">Email</h4>
                       <p className="text-slate-600 text-sm">Пишете ни по всяко време</p>
-                      <a href="mailto:info@cehp.eu" className="text-regmi-600 font-semibold hover:underline">info@cehp.eu</a>
                     </div>
                   </div>
 
@@ -393,7 +381,6 @@ function App() {
             <div className="col-span-1">
               <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Контакт</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-center gap-2"><Mail size={14} /> info@cehp.eu</li>
               </ul>
             </div>
           </div>
