@@ -75,7 +75,7 @@ function App() {
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2 group">
             <img 
-              src="logo.jpg" 
+              src='/logo.jpg'
               alt="РЕГМИ" 
               className="h-14 md:h-16 w-auto object-contain" 
             />
