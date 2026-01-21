@@ -305,9 +305,9 @@ function App() {
                   <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-1">
                     {news.excerpt}
                   </p>
-                  <a href="#" className="text-regmi-600 font-bold text-sm hover:underline inline-flex items-center gap-1">
+                  {/* <a href="#" className="text-regmi-600 font-bold text-sm hover:underline inline-flex items-center gap-1">
                     Прочети повече <ChevronRight size={14} />
-                  </a>
+                  </a> */}
                 </div>
               </article>
             ))}
