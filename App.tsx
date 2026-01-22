@@ -24,7 +24,7 @@ const NEWS_MOCK: NewsItem[] = [
   {
     id: 1,
     title: 'Учредяване на РЕГМИ',
-    date: '22.01.2026',
+    date: '05.11.2025г.',
     excerpt: 'Официалното учредяване на Българското научно дружество по регулация и осигуряване на медицински изделия постави началото на нова ера в сектора.',
     imageUrl: 'https://picsum.photos/id/48/800/600'
   },
@@ -172,6 +172,14 @@ function App() {
       {/* Mission Section */}
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
+          {/* New Explanatory Banner */}
+          <div className="w-full mb-16 rounded-2xl overflow-hidden shadow-lg border border-slate-100 transform hover:scale-[1.01] transition-transform duration-500">
+            <img 
+              src="/banner.png" 
+              alt="РЕГМИ - Регулация и Медицински Изделия" 
+              className="w-full h-auto object-contain bg-slate-50" 
+            />
+          </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">
